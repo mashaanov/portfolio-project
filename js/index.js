@@ -42,6 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
               ease: "power2.inOut",
               delay: 1,
           });
+      gsap.from(".home-img", {
+              duration: 2,
+              x: 30,
+              ease: "power1.out", 
+          });
         });
   
   
