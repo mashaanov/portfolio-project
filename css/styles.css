@@ -34,7 +34,7 @@ header {
   padding: 4rem 12%;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
-  z-index: 5;
+  z-index: 10;
 }
 header .logo {
   font-size: 3rem;
@@ -55,7 +55,7 @@ header .logo span {
 }
 header .navbar {
   position: relative;
-  left: -5;
+  left: -5px;
 }
 header .navbar .nav-item {
   margin-left: 4rem;
@@ -95,7 +95,6 @@ section {
   gap: 15rem;
 }
 .home .home-content {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -279,7 +278,7 @@ section {
 }
 .contact form .input-group-2 textarea {
   transition: font-size 0.5s ease;
-  width: 40rem;
+  width: 100%;
 }
 .contact form .input-group-2 textarea:focus {
   font-size: 1.5rem;
@@ -321,80 +320,34 @@ section {
 .contact form .btn-primary:focus {
   outline: none;
 }
+.contact footer {
+  width: 100%;
+}
 
 @media (max-width: 1285px) {
   html {
     font-size: 55%;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
   header {
-    padding: 2rem 8%;
+    padding: 2rem 3%;
   }
-  .home-content h1 {
-    font-size: 6rem;
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
   }
-  .social-icons a {
-    width: 4rem;
-    height: 4rem;
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding: 37px;
   }
-}
-@media (min-width: 900px) {
-  .home-img {
-    margin-left: 30%;
+  timeline-dot {
+    left: 0;
   }
-  .home {
+  .contact form {
     flex-direction: column;
-    gap: 5rem;
   }
-  .home-content {
-    align-items: center;
-  }
-}
-@media (max-width: 600px) {
-  html {
-    font-size: 50%;
-  }
-  header {
-    align-items: center;
-    padding: 1rem 5%;
-  }
-  .home-content {
-    align-items: center;
-  }
-  .home-content h1 {
-    font-size: 4rem;
-  }
-  .home-content h3 {
-    font-size: 2.5rem;
-  }
-  .home-content p {
-    font-size: 1.4rem;
-  }
-  .home-img {
-    margin-left: 0;
-  }
-  .home-img .avatar {
-    width: 25vh;
-  }
-  .social-icons a {
-    width: 3.5rem;
-    height: 3.5rem;
-    font-size: 2rem;
-    margin: 2rem 1rem;
-  }
-  section {
-    padding: 5rem 5%;
-  }
-  .input-box input,
-  .input-group-2 textarea {
-    width: 100%;
-  }
-  textarea {
-    min-height: 20rem;
-  }
-  .btn-primary {
-    padding: 1rem 2rem;
-    font-size: 1.6rem;
+  footer {
+    padding: 2rem 3%;
   }
 }
