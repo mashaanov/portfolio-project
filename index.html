@@ -14,7 +14,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <script defer src="js/index.js"></script>
+    <script defer type="module" src="js/index.js"></script>
     <script defer src="assets/libs/gsap.min.js"></script>
   </head>
 
@@ -50,13 +50,19 @@
                 I'm a <span class="typing-text"></span>
               </h3>
               <div class="home-content-description">
-                <p>
+                <p class="pb-5">
                   Hello, I am an aspiring frontend developer passionate about
-                  creating interactive user interfaces.
+                  creating interactive user interfaces. I’m in favor of correct
+                  patterns and principles like KISS, YAGNI, MVC, which help
+                  maintain clean and maintainable code.
                 </p>
                 <p>
-                  I specialize in HTML, CSS, JavaScript, and constantly work on
-                  improving my skills.
+                  Tech Stack: HTML5, CSS3, SASS, Vanilla JavaScript, Bootstrap,
+                  Gulp, Webpack, Git. Currently learning and experimenting with
+                  React for building scalable web applications, and GSAP for
+                  advanced animations. I also apply best practices in
+                  accessibility and UX design to ensure that my interfaces are
+                  user-friendly and inclusive.
                 </p>
                 <div class="social-icons">
                   <a href="https://t.me/maria_novv"
@@ -75,8 +81,8 @@
             </div>
           </div>
 
-          <div class="col-md-6 text-center">
-            <div class="home-img d-flex justify-content-end">
+          <div class="col-md-6 text-center img-container">
+            <div class="home-img d-flex justify-content-center">
               <img
                 src="assets/img/image.png"
                 class="avatar img-fluid"
@@ -110,13 +116,6 @@
             <p>
               Incorrect answers end the game and offer to go through it again
             </p>
-            <div class="mt-5">
-              <script
-                src="https://asciinema.org/a/BsX4vJ8idLmVigRJWRJQ8PCE1.js"
-                id="asciicast-BsX4vJ8idLmVigRJWRJQ8PCE1"
-                async="true"
-              ></script>
-            </div>
           </div>
           <div class="timeline-dot"></div>
         </a>
@@ -132,16 +131,9 @@
               This is a CLI utility to determine the differences between data
               configurations.
             </p>
-            <p class="tt">
+            <p>
               Supports working with two files of different formats: json, yaml.
             </p>
-            <div class="mt-5">
-              <script
-                src="https://asciinema.org/a/d7S5ZP6upxQm3JO42utsAVY6t.js"
-                id="asciicast-d7S5ZP6upxQm3JO42utsAVY6t"
-                async="true"
-              ></script>
-            </div>
           </div>
         </a>
 
@@ -182,19 +174,21 @@
         class="d-flex container-fluid align-items-center justify-content-center"
       >
         <div class="container row">
-          <div class="input-box col-md-8">
+          <div class="input-box col-12 col-md-8">
             <input
               name="fullName"
               type="text"
               placeholder="Full Name"
               class="form-control mb-3"
             />
+            <div class="error-message alert" id="fullNameError"></div>
             <input
               type="email"
               placeholder="Email"
               class="form-control mb-3"
               name="email"
             />
+            <div class="error-message alert" id="emailError"></div>
           </div>
           <div class="input-box col-md-8">
             <input
@@ -203,12 +197,14 @@
               placeholder="Phone number"
               class="form-control mb-3"
             />
+            <div class="error-message alert" id="phoneError"></div>
             <input
               name="subject"
               type="text"
               placeholder="Subject"
               class="form-control mb-3"
             />
+            <div class="error-message alert" id="subjectError"></div>
           </div>
         </div>
 
@@ -224,8 +220,16 @@
     </section>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <footer class="footer py-4 text-center">
-      <p>&copy; 2024 Maria Novikova. All Rights Reserved.</p>
+
+    <footer class="footer d-flex justify-content-center">
+      <div class="social-icons social-icons-footer">
+        <a href="https://t.me/maria_novv"><i class="bx bxl-telegram"></i></a>
+        <a href="https://github.com/mashaanov"><i class="bx bxl-github"></i></a>
+        <a href="mailto:m.v.novikovaaa@gmail.com?subject=:&#41;&body=something"
+          ><i class="bx bxs-inbox"></i
+        ></a>
+        <a href="tel:+78121111111"><i class="bx bx-phone"></i></a>
+      </div>
     </footer>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
