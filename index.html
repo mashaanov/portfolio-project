@@ -40,7 +40,7 @@
       </div>
     </header>
 
-    <section class="home container-fluid" id="home">
+    <section class="home container" id="home">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6">
@@ -171,10 +171,10 @@
         id="contact-form"
         action="submit"
         method="post"
-        class="d-flex container-fluid align-items-center justify-content-center"
+        class="d-flex container align-items-center justify-content-center"
       >
-        <div class="container row">
-          <div class="input-box col-12 col-md-8">
+        <div class="container row justify-content-center">
+          <div class="input-box justify-content-center">
             <input
               name="fullName"
               type="text"
@@ -190,7 +190,7 @@
             />
             <div class="error-message alert" id="emailError"></div>
           </div>
-          <div class="input-box col-md-8">
+          <div class="input-box justify-content-center">
             <input
               name="phone"
               type="tel"
@@ -208,21 +208,23 @@
           </div>
         </div>
 
-        <div class="input-group-2 col-md-6">
+        <div class="row input-group-2 col-md-6 justify-content-center">
           <textarea
             name="message"
             placeholder="Your Message"
             class="mb-5"
           ></textarea>
-          <input type="submit" value="Send Message" class="btn-primary" />
+          <div>
+            <input type="submit" value="Send Message" class="btn-primary" />
+          </div>
         </div>
       </form>
     </section>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-    <footer class="footer d-flex justify-content-end">
-      <div class="social-icons social-icons-footer">
+    <footer class="footer d-flex justify-content-center">
+      <div class="social-icons social-icons-footer d-flex">
         <a href="https://t.me/maria_novv"><i class="bx bxl-telegram"></i></a>
         <a href="https://github.com/mashaanov"><i class="bx bxl-github"></i></a>
         <a href="mailto:m.v.novikovaaa@gmail.com?subject=:&#41;&body=something"
