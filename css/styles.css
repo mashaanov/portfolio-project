@@ -88,12 +88,14 @@ section {
 }
 
 .home {
+  overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15rem;
 }
 .home .home-content {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -283,7 +285,7 @@ section {
   font-size: 1.5rem;
 }
 .contact form .input-box input {
-  width: 35rem;
+  width: 40rem;
 }
 .contact form .input-box input:focus {
   transition: box-shadow 0.9s ease;
@@ -350,11 +352,49 @@ section {
   }
 }
 @media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
+  html {
+    font-size: 50%;
   }
-  .social-icons {
-    justify-content: center;
+  header {
+    align-items: center;
+    padding: 1rem 5%;
+  }
+  .home-content {
+    align-items: center;
+  }
+  .home-content h1 {
+    font-size: 4rem;
+  }
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+  .home-content p {
+    font-size: 1.4rem;
+  }
+  .home-img {
+    margin-left: 0;
+  }
+  .home-img .avatar {
+    width: 25vh;
+  }
+  .social-icons a {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2rem;
+    margin: 2rem 1rem;
+  }
+  section {
+    padding: 5rem 5%;
+  }
+  .input-box input,
+  .input-group-2 textarea {
+    width: 100%;
+  }
+  textarea {
+    min-height: 20rem;
+  }
+  .btn-primary {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
   }
 }
