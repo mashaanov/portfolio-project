@@ -15,12 +15,18 @@
 
 html {
   font-size: 60%;
-  overflow-x: hidden;
 }
 
 body {
   background: #080808;
   color: white;
+}
+
+body,
+html {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 header {
@@ -95,6 +101,7 @@ section {
   gap: 15rem;
 }
 .home .home-content {
+  text-wrap: balance;
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -127,13 +134,16 @@ section {
   max-width: 1000px;
 }
 .home .home-img {
+  margin-left: 15rem;
   border-radius: 50%;
 }
 .home .home-img .avatar {
+  width: 100%;
+  max-width: 45vh;
+  height: auto;
   position: relative;
   top: 4rem;
   border-radius: 50%;
-  width: 45vh;
   box-shadow: 0 0 25px #0fe;
   cursor: pointer;
   transition: 0.4s ease-in-out;
@@ -141,8 +151,7 @@ section {
 .home .home-img .avatar:hover {
   box-shadow: 0 0 40px #0fe, 0 0 20px #0fe, 0 0 50px #0fe;
 }
-
-.social-icons a {
+.home .social-icons a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +165,7 @@ section {
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.3s ease-in-out;
 }
-.social-icons a:hover {
+.home .social-icons a:hover {
   color: white;
   background: #0fe;
   box-shadow: 0 0 25px #0fe;
@@ -320,8 +329,30 @@ section {
 .contact form .btn-primary:focus {
   outline: none;
 }
-.contact footer {
-  width: 100%;
+
+footer {
+  padding: 2rem 3%;
+}
+footer .social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: transparent;
+  border: 2px solid #0fe;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  color: #0fe;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease-in-out;
+}
+footer .social-icons a:hover {
+  color: white;
+  background: #0fe;
+  box-shadow: 0 0 25px #0fe;
+  transform: scale(1.3);
+  text-decoration: none;
 }
 
 @media (max-width: 1285px) {
@@ -347,7 +378,19 @@ section {
   .contact form {
     flex-direction: column;
   }
-  footer {
-    padding: 2rem 3%;
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 40%;
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 400px) {
+  .home .home-content {
+    width: 50%;
+  }
+  .home .home-img {
+    margin-left: 5rem;
+    width: 40%;
   }
 }
