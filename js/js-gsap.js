@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 export default function gsapAnimation() {
   const text = "Frontend-developer";
   const typingTextElement = document.querySelector(".typing-text");
@@ -62,4 +64,4 @@ export default function gsapAnimation() {
       toggleActions: "play none none none",
     },
   });
-};
+}
