@@ -42,6 +42,11 @@ header {
   backdrop-filter: blur(10px);
   z-index: 10;
 }
+header #menu-icon {
+  font-size: 3.6rem;
+  color: #0fe;
+  display: none;
+}
 header .logo {
   font-size: 3rem;
   color: white;
@@ -82,12 +87,6 @@ header .navbar .nav-item .nav-link:hover {
   color: #0fe;
 }
 
-#menu-icon {
-  font-size: 3.6rem;
-  color: #0fe;
-  display: none;
-}
-
 section {
   min-width: 100vh;
   padding: 10rem 12%;
@@ -101,6 +100,7 @@ section {
   gap: 15rem;
 }
 .home .home-content {
+  width: 100%;
   text-wrap: balance;
   display: flex;
   flex-direction: column;
@@ -134,6 +134,9 @@ section {
   max-width: 1000px;
 }
 .home .home-img {
+  position: relative;
+  top: 3rem;
+  width: 32vw;
   margin-left: 15rem;
   border-radius: 50%;
 }
@@ -176,8 +179,11 @@ section {
 .projects-heading,
 .contact-heading {
   font-size: 8rem;
-  text-align: center;
-  margin: 5rem 0;
+  text-wrap: balance;
+}
+
+.contact-heading span {
+  color: #0fe;
 }
 
 .timeline {
@@ -203,7 +209,7 @@ section {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  margin: 2rem 0;
+  margin: 8rem 0;
   color: inherit;
 }
 .timeline .timeline-item:hover .timeline-content {
@@ -254,7 +260,7 @@ section {
 }
 .contact form {
   gap: 5rem;
-  margin: 5rem auto;
+  margin: auto;
 }
 .contact form .input-box {
   display: flex;
@@ -361,36 +367,132 @@ footer .social-icons a:hover {
   }
 }
 @media (max-width: 991px) {
-  header {
-    padding: 2rem 3%;
-  }
-  .timeline-item:nth-child(odd) {
-    padding-right: 0;
-    text-align: left;
-  }
-  .timeline-item:nth-child(odd),
-  .timeline-item:nth-child(even) {
-    padding: 37px;
-  }
-  timeline-dot {
-    left: 0;
-  }
-  .contact form {
-    flex-direction: column;
-  }
-}
-@media (max-width: 991px) {
   html {
     font-size: 40%;
     overflow-x: hidden;
   }
+  header {
+    padding: 2rem 3%;
+  }
 }
-@media (max-width: 400px) {
-  .home .home-content {
+@media (max-width: 860px) {
+  .timeline {
+    position: relative;
+    width: 100%;
+    padding: 4rem 0;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: #0fe;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: none;
+  }
+  .timeline .timeline-item:nth-child(odd) .timeline-content {
+    width: 80vw;
+    margin-left: 5%;
+    text-align: left;
+  }
+  .timeline .timeline-item:nth-child(even) .timeline-content {
+    width: 50vw;
+    margin-left: 5%;
+    text-align: left;
+  }
+  .timeline .timeline-dot {
+    left: 0;
+  }
+  .timeline .timeline-content {
+    font-size: 14px;
+  }
+  .timeline .timeline-content h3 {
+    font-size: 16px;
+  }
+  .timeline .timeline-content p {
+    font-size: 12px;
+  }
+  .home-content-description {
+    width: 90%;
+  }
+}
+@media (max-width: 769px) {
+  form {
+    width: 80%;
+    flex-direction: column;
+  }
+  header #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
     width: 50%;
+    padding: 1rem 3%;
+    background: #080808;
+    backdrop-filter: blur(20px);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid #0fe;
+    border-bottom: 2px solid #0fe;
+    display: none;
+  }
+  .navbar.active {
+    display: block;
+  }
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: white;
+  }
+  .home .row {
+    flex-direction: column-reverse;
+  }
+  .home .home-content h3 {
+    font-size: 2.6rem;
+  }
+  .home .home-content h1 {
+    font-size: 7rem;
+    margin-top: 5rem;
+  }
+  .home .home-content p {
+    max-width: 600px;
+  }
+  .home .home-img {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 510px) {
+  .home .home-content {
+    width: 70%;
+    flex-wrap: wrap;
   }
   .home .home-img {
     margin-left: 5rem;
+    width: 50vw;
+  }
+}
+@media (max-width: 430px) {
+  .home .home-content {
+    width: 60%;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 400px) {
+  .home .home-content {
     width: 40%;
+    flex-wrap: wrap;
+  }
+  .home h3 {
+    font-size: 1.6rem;
+  }
+  .home h1 {
+    font-size: 4rem;
+    margin-top: 5rem;
+  }
+  .home p {
+    max-width: 400px;
   }
 }
