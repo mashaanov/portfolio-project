@@ -89,7 +89,7 @@ header .navbar .nav-item .nav-link:hover {
 
 section {
   min-width: 100vh;
-  padding: 10rem 12%;
+  padding: 15rem 12%;
 }
 
 .home {
@@ -259,8 +259,11 @@ section {
   color: #0fe;
 }
 .contact form {
-  gap: 5rem;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 15rem auto;
 }
 .contact form .input-box {
   display: flex;
@@ -269,7 +272,7 @@ section {
   justify-content: center;
   flex-wrap: wrap;
 }
-.contact form .form .input-group-2 {
+.contact form .input-group-2 {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -279,6 +282,10 @@ section {
 }
 .contact form .form-control:focus {
   font-size: 1.5rem;
+}
+.contact form .input-box input {
+  width: 100%;
+  max-width: 40rem;
 }
 .contact form .input-box input,
 .contact form .input-group-2 textarea {
@@ -300,6 +307,7 @@ section {
 }
 .contact form .input-box input {
   width: 40rem;
+  margin-right: 5rem;
 }
 .contact form .input-box input:focus {
   transition: box-shadow 0.9s ease;
@@ -308,7 +316,6 @@ section {
 }
 .contact form textarea {
   min-height: 30rem;
-  resize: vertical;
 }
 .contact form textarea:focus {
   transition: box-shadow 0.9s ease;
@@ -365,17 +372,41 @@ footer .social-icons a:hover {
   html {
     font-size: 55%;
   }
-}
-@media (max-width: 991px) {
-  html {
-    font-size: 40%;
-    overflow-x: hidden;
+  .contact {
+    display: contents;
   }
-  header {
-    padding: 2rem 3%;
+  .contact form {
+    width: 80%;
   }
-}
-@media (max-width: 860px) {
+  .contact form .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .contact form .input-box input {
+    width: 80%;
+    max-width: 40rem;
+    margin-right: 5rem;
+  }
+  .contact form .input-box input,
+  .contact form .input-group-2 textarea {
+    padding: 3rem;
+    font-size: 1.5rem;
+    margin: 1.5rem 1.5rem;
+  }
+  .contact form .input-group-2 textarea {
+    transition: font-size 0.5s ease;
+    width: 100%;
+  }
+  .contact form .input-group-2 textarea:focus {
+    font-size: 1.5rem;
+  }
+  .contact form .input-box input {
+    width: 40rem;
+  }
+  .contact form textarea {
+    min-height: 30rem;
+  }
   .timeline {
     position: relative;
     width: 100%;
@@ -413,15 +444,25 @@ footer .social-icons a:hover {
   .timeline .timeline-content p {
     font-size: 12px;
   }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 40%;
+    overflow-x: hidden;
+  }
+  header {
+    padding: 2rem 3%;
+  }
+}
+@media (max-width: 860px) {
   .home-content-description {
     width: 90%;
   }
-}
-@media (max-width: 769px) {
   form {
-    width: 80%;
     flex-direction: column;
   }
+}
+@media (max-width: 769px) {
   header #menu-icon {
     display: block;
   }
@@ -461,12 +502,12 @@ footer .social-icons a:hover {
     max-width: 600px;
   }
   .home .home-img {
-    margin: 0 auto;
+    margin-left: 0;
   }
 }
 @media (max-width: 510px) {
   .home .home-content {
-    width: 70%;
+    width: 100%;
     flex-wrap: wrap;
   }
   .home .home-img {
