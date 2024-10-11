@@ -45,9 +45,7 @@
     </header>
 
     <section class="home" id="home">
-      <div
-        class="container-fluid d-flex align-items-center justify-content-between"
-      >
+      <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-md-6">
             <div class="home-content">
@@ -55,20 +53,19 @@
               <h3 class="text-animation">
                 I'm a <span class="typing-text"></span>
               </h3>
-              <div class="home-content-description row">
+              <div class="home-content-description">
                 <p class="pb-5">
                   Hello, I am an aspiring frontend developer passionate about
                   creating interactive user interfaces. I’m in favor of correct
-                  patterns and principles like KISS, YAGNI, MVC, which help
-                  maintain clean and maintainable code.
+                  patterns and principles like KISS, YAGNI, MVC, which help maintain
+                  clean and maintainable code.
                 </p>
                 <p>
-                  Tech Stack: HTML5, CSS3, SASS, Vanilla JavaScript, Bootstrap,
-                  Gulp, Webpack, Git. Currently learning and experimenting with
-                  React for building scalable web applications, and GSAP for
-                  advanced animations. I also apply best practices in
-                  accessibility and UX design to ensure that my interfaces are
-                  user-friendly and inclusive.
+                  Tech Stack: HTML5, CSS3, SASS, Vanilla JavaScript, Bootstrap, Gulp,
+                  Webpack, Git. Currently learning and experimenting with React for
+                  building scalable web applications, and GSAP for advanced
+                  animations. I also apply best practices in accessibility and UX
+                  design to ensure that my interfaces are user-friendly and inclusive.
                 </p>
                 <div class="social-icons">
                   <a href="https://t.me/maria_novv"
@@ -86,14 +83,14 @@
               </div>
             </div>
           </div>
-
-          <div class="col-md-6 text-center img-container">
-            <div class="home-img d-flex">
-              <img
-                src="assets/img/image.png"
-                class="avatar img-fluid"
-                alt="avatar"
-              />
+    
+          <div class="col-md-6">
+              <div class="home-img">
+                <img
+                  src="assets/img/image.png"
+                  class="avatar img-fluid"
+                  alt="avatar"
+                />
             </div>
           </div>
         </div>
@@ -169,7 +166,7 @@
       </div>
     </section>
 
-    <div>
+    <div class="contact-heading">
       <h2 class="contact-heading text-center mb-5">
         Let’s Build Something Great <span>Together</span>
       </h2>
@@ -226,6 +223,8 @@
             name="message"
             placeholder="Your Message"
             class="mb-5"
+            cols="30"
+            rows="10"
           ></textarea>
           <div>
             <input type="submit" value="Send Message" class="btn-primary" />
