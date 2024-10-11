@@ -376,36 +376,35 @@ footer .social-icons a:hover {
     display: contents;
   }
   .contact form {
-    width: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .contact form .input-box {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-  }
-  .contact form .input-box input {
-    width: 80%;
-    max-width: 40rem;
-    margin-right: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
   .contact form .input-box input,
   .contact form .input-group-2 textarea {
+    width: 100%;
+    max-width: 40rem;
     padding: 3rem;
     font-size: 1.5rem;
-    margin: 1.5rem 1.5rem;
-  }
-  .contact form .input-group-2 textarea {
-    transition: font-size 0.5s ease;
-    width: 100%;
-  }
-  .contact form .input-group-2 textarea:focus {
-    font-size: 1.5rem;
-  }
-  .contact form .input-box input {
-    width: 40rem;
+    margin: 1rem 0;
   }
   .contact form textarea {
     min-height: 30rem;
+    width: 100%;
+    max-width: 40rem;
+  }
+  .contact form .input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   .timeline {
     position: relative;
@@ -503,22 +502,6 @@ footer .social-icons a:hover {
   }
   .home .home-img {
     margin-left: 0;
-  }
-}
-@media (max-width: 510px) {
-  .home .home-content {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  .home .home-img {
-    margin-left: 5rem;
-    width: 50vw;
-  }
-}
-@media (max-width: 430px) {
-  .home .home-content {
-    width: 60%;
-    flex-wrap: wrap;
   }
 }
 @media (max-width: 400px) {
