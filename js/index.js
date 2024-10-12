@@ -9,6 +9,7 @@ class Controller {
     this.view = new View();
 
     this.initialize();
+    this.handleToggleNavbar()
   }
 
   initialize() {
@@ -98,6 +99,27 @@ class Controller {
     const message = this.view.form.querySelector("textarea").value.trim();
 
     return { fullName, email, phone, subject, message };
+  }
+
+  handleToggleNavbar() {
+    const btnOpen = document.getElementById('menu-icon');
+    const btnClose = document.getElementById('close-menu-icon');
+    const modal = document.getElementById('navbar');
+  
+    if (!btnOpen || !btnClose || !modal) {
+      console.error("Элементы меню не найдены в DOM!");
+      return; // Если элементы не найдены, прекращаем выполнение
+    }
+  
+    btnOpen.addEventListener('click', () => {
+      console.log("Открытие меню"); // Лог для отладки
+      this.view.openMenu(modal, btnClose, btnOpen);
+    });
+  
+    btnClose.addEventListener('click', () => {
+      console.log("Закрытие меню"); // Лог для отладки
+      this.view.closeMenu(modal, btnClose, btnOpen);
+    });
   }
 }
 
