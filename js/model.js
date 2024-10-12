@@ -41,6 +41,14 @@ export default class Model {
       if (response.status === 200) {
         this.state.form.process.state = "success";
         console.log("Form sent successfully!");
+
+        emailjs.send('service_9wg442l', 'template_qvpqyqt', formData)
+        .then(() => {
+          console.log('Email sent successfully');
+        })
+        .catch((error) => {
+          console.error('Failed to send email:', error);
+        });
       } else {
         this.state.form.process.state = "failed";
         this.state.form.process.error =
