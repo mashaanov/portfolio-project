@@ -47,6 +47,12 @@ header #menu-icon {
   color: #0fe;
   display: none;
 }
+header #close-menu-icon {
+  font-size: 3.6rem;
+  margin-right: 2px;
+  color: #0fe;
+  display: none;
+}
 header .logo {
   font-size: 3rem;
   color: white;
@@ -441,18 +447,27 @@ footer .social-icons a:hover {
   header #menu-icon {
     display: block;
   }
+  header #close-menu-icon.active {
+    display: block;
+  }
+  header #menu-icon.active {
+    display: block;
+  }
+  header #menu-icon.inactive {
+    display: none;
+  }
   .navbar {
     position: absolute;
     top: 100%;
     right: 0;
     width: 50%;
     padding: 1rem 3%;
-    background: #080808;
-    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.5);
     border-bottom-left-radius: 2rem;
     border-left: 2px solid #0fe;
     border-bottom: 2px solid #0fe;
     display: none;
+    z-index: 10;
   }
   .navbar.active {
     display: block;
