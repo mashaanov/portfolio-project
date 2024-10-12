@@ -27,8 +27,9 @@
       <div class="container d-flex justify-content-between align-items-center">
         <a href="#home" class="logo">Maria <span>Novikova</span></a>
         <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-x" id="close-menu-icon"></i>
 
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
           <ul class="navbar-nav d-flex flex-row">
             <li class="nav-item">
               <a href="#home" class="nav-link">Home</a>
@@ -51,19 +52,21 @@
       <div class="home-content">
         <h1>Hi, <span>Maria</span> in touch</h1>
         <h3 class="text-animation">I'm a <span class="typing-text"></span></h3>
-        <p class="pb-5">
-          Hello, I am an aspiring frontend developer passionate about creating
-          interactive user interfaces. I’m in favor of correct patterns and
-          principles like KISS, YAGNI, MVC, which help maintain clean and
-          maintainable code.
-        </p>
-        <p>
-          Tech Stack: HTML5, CSS3, SASS, Vanilla JavaScript, Bootstrap, Gulp,
-          Webpack, Git. Currently learning and experimenting with React for
-          building scalable web applications, and GSAP for advanced animations.
-          I also apply best practices in accessibility and UX design to ensure
-          that my interfaces are user-friendly and inclusive.
-        </p>
+        <div class="home-content-description">
+          <p class="pb-5">
+            Hello, I am an aspiring frontend developer passionate about creating
+            interactive user interfaces. I’m in favor of correct patterns and
+            principles like KISS, YAGNI, MVC, which help maintain clean and
+            maintainable code.
+          </p>
+          <p>
+            Tech Stack: HTML5, CSS3, SASS, Vanilla JavaScript, Bootstrap, Gulp,
+            Webpack, Git. Currently learning and experimenting with React for
+            building scalable web applications, and GSAP for advanced animations.
+            I also apply best practices in accessibility and UX design to ensure
+            that my interfaces are user-friendly and inclusive.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -136,8 +139,8 @@
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="contact-heading">
+    <section class="contact">
+      <div class="contact-heading" id="contact">
         <h2 class="contact-heading text-center mb-5">
           Let’s Build Something Great <span>Together</span>
         </h2>
