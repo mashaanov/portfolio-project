@@ -14,10 +14,7 @@ const schema = yup.object().shape({
     .required("Email is required"),
   phone: yup
     .string()
-    .matches(
-      /^[+\d\s]+$/,
-      "Phone format is invalid"
-    )
+    .matches(/^[+\d\s]+$/, "Phone format is invalid")
     .required("Phone is required"),
   subject: yup
     .string()
@@ -26,7 +23,7 @@ const schema = yup.object().shape({
   message: yup
     .string()
     .required(false)
-    .matches(/^[a-zA-Zа-яА-ЯёЁ\s-?!:)(')]*$/, "Message format is invalid"),
+    .matches(/^[\s\S]*$/, "Message format is invalid"),
 });
 
 export default (formData) => {
