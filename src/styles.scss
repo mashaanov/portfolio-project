@@ -54,6 +54,13 @@ header {
     display: none;
   }
 
+  #close-menu-icon {
+    font-size: 3.6rem;
+    margin-right: 2px;
+    color: $main-color;
+    display: none;
+  }
+
   .logo {
     font-size: 3rem;
     color: $text-color;
@@ -530,6 +537,18 @@ footer {
     #menu-icon {
       display: block;
     }
+
+    #close-menu-icon.active {
+      display: block;
+    }
+
+    #menu-icon.active {
+      display: block;
+    }
+
+    #menu-icon.inactive {
+      display: none;
+    }
   }
 
   .navbar {
@@ -538,12 +557,12 @@ footer {
     right: 0;
     width: 50%;
     padding: 1rem 3%;
-    background: $bg-color;
-    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.5);
     border-bottom-left-radius: 2rem;
     border-left: 2px solid $main-color;
     border-bottom: 2px solid $main-color;
     display: none;
+    z-index: 10;
   }
 
   .navbar.active {
