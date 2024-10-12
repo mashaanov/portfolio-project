@@ -122,4 +122,41 @@ export default class View {
       }
     });
   }
+
+  openMenu(modal, closeIcon, menuIcon) {
+    if (!modal.classList.contains("active")) {
+      menuIcon.classList.remove("active");
+      menuIcon.classList.add("inactive");
+
+      modal.classList.add("active");
+      closeIcon.classList.add("active");
+    
+      gsap.fromTo(
+        modal,
+        { opacity: 0, scale: 0.5 },
+        { opacity: 1, scale: 1, duration: 0.5, ease: "power2.out" }
+      );
+    }
+  }
+  
+  closeMenu(modal, closeIcon, menuIcon) {
+    if (modal.classList.contains("active")) {
+      closeIcon.classList.remove("active");
+      modal.classList.remove("active");
+      menuIcon.classList.add("active");
+  
+      gsap.to(modal, {
+        opacity: 0,
+        scale: 0.5,
+        duration: 0.5,
+        ease: "power2.in",
+        onComplete: () => {
+          modal.classList.remove("active");
+        },
+      });
+  
+      menuIcon.classList.remove("inactive");
+      menuIcon.classList.add("active");
+    }
+  }
 }
